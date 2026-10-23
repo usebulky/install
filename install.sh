@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #
-# One-command Bulky installer for a fresh Ubuntu 22.04/24.04 amd64 server:
+# One-command Bulky installer for a fresh Ubuntu 22.04/24.04/26.04 amd64 server:
 #
 #   curl -fsSL https://raw.githubusercontent.com/usebulky/install/main/install.sh | sudo bash
 #
@@ -31,8 +31,8 @@ main() {
     # shellcheck disable=SC1091
     . /etc/os-release
     case "${ID:-}:${VERSION_ID:-}" in
-        ubuntu:22.04 | ubuntu:24.04) ;;
-        *) die "Bulky needs Ubuntu 22.04 or 24.04 (this is ${PRETTY_NAME:-unknown})" ;;
+        ubuntu:22.04 | ubuntu:24.04 | ubuntu:26.04) ;;
+        *) die "Bulky needs Ubuntu 22.04, 24.04 or 26.04 (this is ${PRETTY_NAME:-unknown})" ;;
     esac
     [ "$(uname -m)" = x86_64 ] || die "Bulky needs an amd64 (x86_64) server"
     (: </dev/tty) 2>/dev/null || die "run this from an interactive terminal (it asks for passwords)"
