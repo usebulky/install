@@ -4,11 +4,8 @@ Installs [Bulky](https://usebulky.com) on a fresh Ubuntu 22.04 or 24.04 (amd64)
 server with DNS already pointing at it:
 
 ```sh
-curl -fsSL https://access.usebulky.com/install | sudo bash
+curl -fsSL https://raw.githubusercontent.com/usebulky/install/main/install.sh | sudo bash
 ```
-
-(`https://access.usebulky.com/install` redirects to
-`https://raw.githubusercontent.com/usebulky/install/main/install.sh`.)
 
 It asks for the hostname, the first admin's email and password, and your
 license key, then downloads the newest release your license allows from
@@ -19,7 +16,7 @@ up encrypted backups.
 Set `BULKY_DATA_DIR` for a data directory other than `/srv/bulky`:
 
 ```sh
-curl -fsSL https://access.usebulky.com/install | sudo BULKY_DATA_DIR=/data/bulky bash
+curl -fsSL https://raw.githubusercontent.com/usebulky/install/main/install.sh | sudo BULKY_DATA_DIR=/data/bulky bash
 ```
 
 Read the script before running it if you like; it contains no secrets; your
