@@ -4,6 +4,9 @@
 #
 #   curl -fsSL https://access.usebulky.com/install | sudo bash
 #
+# Published copy: github.com/usebulky/install (install.sh), which that URL
+# redirects to. This file is the source; copy it there when it changes.
+#
 # Asks for the hostname, the first admin's email and the license key, then
 # downloads the newest release the license allows from access.usebulky.com
 # (checking its size and SHA-256), unpacks it to /opt/bulky-vX.Y.Z, prepares
