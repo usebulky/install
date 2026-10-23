@@ -1,6 +1,6 @@
 # Bulky installer
 
-Installs [Bulky](https://usebulky.com) on a fresh Ubuntu 22.04 or 24.04 (amd64)
+Installs [Bulky](https://usebulky.com) on a fresh Ubuntu 22.04, 24.04 or 26.04 (amd64)
 server with DNS already pointing at it:
 
 ```sh
