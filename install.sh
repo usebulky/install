@@ -2,10 +2,10 @@
 #
 # One-command Bulky installer for a fresh Ubuntu 22.04/24.04 amd64 server:
 #
-#   curl -fsSL https://access.usebulky.com/install | sudo bash
+#   curl -fsSL https://raw.githubusercontent.com/usebulky/install/main/install.sh | sudo bash
 #
-# Published copy: github.com/usebulky/install (install.sh), which that URL
-# redirects to. This file is the source; copy it there when it changes.
+# Published copy: github.com/usebulky/install (install.sh). This file is the
+# source; copy it there when it changes.
 #
 # Asks for the hostname, the first admin's email and the license key, then
 # downloads the newest release the license allows from access.usebulky.com
@@ -27,7 +27,7 @@ main() {
     local data="${BULKY_DATA_DIR:-/srv/bulky}"
     local host email key backups version bundle tmp stage="checks"
 
-    [ "$(id -u)" = 0 ] || die "run as root: curl -fsSL https://access.usebulky.com/install | sudo bash"
+    [ "$(id -u)" = 0 ] || die "run as root: curl -fsSL https://raw.githubusercontent.com/usebulky/install/main/install.sh | sudo bash"
     # shellcheck disable=SC1091
     . /etc/os-release
     case "${ID:-}:${VERSION_ID:-}" in
